@@ -224,7 +224,7 @@ class Main(Resource):
 				if data == []:
 					return "No unread messages"
 				else:
-					m_cursor.execute("""UPDATE messages SET is_read = (?) WHERE recipient_id = (?)""", (True, sender_id))
+					m_cursor.execute("""UPDATE messages SET is_read = (?) WHERE sender_id = (?)""", (True, sender_id))
 					return data
 
 			if (recipient or text) != None:
