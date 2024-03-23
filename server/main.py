@@ -225,7 +225,7 @@ class Main(Resource):
 					return "No unread messages"
 				else:
 					m_cursor.execute("""UPDATE messages SET is_read = (?) WHERE recipient_id = (?)""", (True, sender_id))
-					return data[0]
+					return data
 
 			if (recipient or text) != None:
 				recipient = cipher.decrypt(bytes.fromhex(recipient)).decode("UTF-8")
