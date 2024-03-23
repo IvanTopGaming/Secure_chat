@@ -1,0 +1,6 @@
+/client/__pycache__
+/venv
+/server/mail.py
+/.vscode
+users.db
+messages.db

@@ -1,0 +1,4 @@
+rsa
+pyjwt
+pycryptodome
+Flask-RESTful
