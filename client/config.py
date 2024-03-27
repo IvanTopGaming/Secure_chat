@@ -1,2 +1,2 @@
-server_ip = "http://127.0.0.1:5000/api"
+server_ip = "http://90.156.229.85:5000/api"
 TOKEN = None
