@@ -1,0 +1,7 @@
+venv/
+users.db
+messages.db
+client/config.py
+02.ico
+Desktop.ini
+client/__pycache__
