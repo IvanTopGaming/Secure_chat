@@ -13,7 +13,8 @@ def check_new_messages(cipher, token):
 	enc_token = cipher.encrypt(token.encode("UTF-8"))
 	responce = requests.post(
 		server_ip,
-		{"token": enc_token.hex(), "update": True}
+		{"token": enc_token.hex(), "update": True},
+		verify=False
 	)
 	return responce.text
 
@@ -28,6 +29,7 @@ def create_dialog(cipher, token):
 	request = requests.post(
 		server_ip,
 		{"token": token.hex(), "recipient": recipient.hex(), "text": text.hex()},
+		verify=False
 	)
 	return request.text
 
@@ -40,6 +42,7 @@ def auth(cipher, login, password, nickname):
 	responce = requests.post(
 		server_ip,
 		{"login": login.hex(), "password": password.hex(), "nickname": nickname.hex()},
+		verify=False
 	)
 	return responce.text
 
